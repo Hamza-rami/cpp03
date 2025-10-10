@@ -15,6 +15,7 @@
         "compare": "cpp",
         "concepts": "cpp",
         "cstdint": "cpp",
+        "deque": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
         "exception": "cpp",
@@ -23,6 +24,7 @@
         "iterator": "cpp",
         "memory": "cpp",
         "memory_resource": "cpp",
+        "numeric": "cpp",
         "optional": "cpp",
         "random": "cpp",
         "string": "cpp",
@@ -38,12 +40,10 @@
         "limits": "cpp",
         "new": "cpp",
         "numbers": "cpp",
-        "numeric": "cpp",
         "ostream": "cpp",
         "ranges": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp",
-        "deque": "cpp"
+        "typeinfo": "cpp"
     }
 }
