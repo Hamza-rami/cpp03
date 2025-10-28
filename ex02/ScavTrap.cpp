@@ -5,12 +5,34 @@ ScavTrap::ScavTrap(std::string n) : ClapTrap(n)
     Hit = 100;
     Energy = 50;
     Damage = 20;
-    std::cout << "ScavTrap " << " created!" << std::endl;
+    std::cout << "ScavTrap " << name << " has been created with Parameterized constructor" << std::endl;
 }
 
+ScavTrap::ScavTrap() : ClapTrap()
+{
+    Hit = 100;
+    Energy = 50;
+    Damage = 20;
+    std::cout << "ScavTrap " << name << " has been created with Default constructor" << std::endl;
+} 
+
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{
+    std::cout << "ScavTrap " << other.name << " has been copied!" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+    if (this != &other)
+    {
+        ClapTrap::operator=(other);
+    }
+    std::cout << "ScavTrap " << name << " has been assigned values from another instance!" << std::endl;
+    return *this;
+}
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap " << name << " destroyed!" << std::endl;
+    std::cout << "ScavTrap " << name << " has been destroyed!" << std::endl;
 }
 
 
@@ -21,11 +43,18 @@ void ScavTrap::guardGate()
 
 void ScavTrap::attack(const std::string& target)
 {
-    if (Hit == 0 || Energy == 0)
+    if (Hit == 0)
     {
-        std::cout << "ScavTrap " << name << " has no energy or hit points left to attack!" << std::endl;
+        std::cout << "ScavTrap " << name << " cannot attack — it's destroyed!" << std::endl;
         return;
     }
-    std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << Damage << " points of damage!" << std::endl;
+    if (Energy == 0)
+    {
+        std::cout << "ScavTrap " << name << " has no energy left to attack!" << std::endl;
+        return;
+    }
+
+    std::cout << "ScavTrap " << name << " attacks " << target
+              << ", causing " << Damage << " points of damage!" << std::endl;
     Energy--;
 }

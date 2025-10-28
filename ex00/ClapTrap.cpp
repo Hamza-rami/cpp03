@@ -46,7 +46,7 @@ void ClapTrap::attack(const std::string &target)
     }
     if (Energy == 0)
     {
-        std::cout << "⚡ ClapTrap " << name << " has no energy left to attack!" << std::endl;
+        std::cout << "ClapTrap " << name << " has no energy left to attack!" << std::endl;
         return;
     }
 
