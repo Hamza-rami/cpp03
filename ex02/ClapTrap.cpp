@@ -15,6 +15,37 @@ ClapTrap::~ClapTrap()
     std::cout << "ClapTrap " << name << " destroyed!" << std::endl;
 }
 
+ClapTrap::ClapTrap()
+{
+    name = "";
+    Energy = 10;
+    Hit = 10;
+    Damage = 0;
+    std::cout << "ClapTrap created!" << std::endl;   
+}
+
+
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+    this->Damage = other.Damage;
+    this->Energy = other.Energy;
+    this->Hit = other.Hit;
+    this->name = other.name;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+    if (this != &other)
+    {
+        this->Damage = other.Damage;
+        this->Energy = other.Energy;
+        this->Hit = other.Hit;
+        this->name = other.name;
+    }
+    return *this;
+}
+
+
 void ClapTrap::attack(const std::string& target)
 {
     if (Hit == 0 || Energy == 0)

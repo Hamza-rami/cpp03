@@ -20,3 +20,8 @@ void DiamondTrap::whoAmI()
 {
     std::cout << "DiamondTrap name: " << name << ", ClapTrap name: " << ClapTrap::name << std::endl;
 }
+
+void DiamondTrap::attack(const std::string &target) 
+{
+    ScavTrap::attack(target);
+}
