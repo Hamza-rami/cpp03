@@ -4,11 +4,11 @@
 
 int main()
 {
-    FragTrap fr;
-    fr.attack("Enemy");
-    fr.takeDamage(100);
-    fr.beRepaired(10);
-    // fr.highFivesGuys();
+    FragTrap frag("hamza");
+    frag.attack("Enemy");
+    frag.takeDamage(100);
+    frag.beRepaired(10);
+    frag.highFivesGuys();
 
     return 0;
 }
