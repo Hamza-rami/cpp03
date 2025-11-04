@@ -1,6 +1,6 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name")
+DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name") , ScavTrap(n), FragTrap(n)
 {
     name = n;
     Hit =  FragTrap::Hit;

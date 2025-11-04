@@ -1,14 +1,11 @@
 #include "ScavTrap.hpp"
+// #include "C.hpp"
 
 
 int main()
 {
     ScavTrap sc;
-    ScavTrap scav(sc);
-    scav.attack("Enemy");
-    scav.takeDamage(100);
-    scav.beRepaired(10);
-    scav.guardGate();
+    sc.attack("Enemy");
 
     return 0;
 }

@@ -10,6 +10,7 @@ protected:
     int Hit;
     int Energy;
     int Damage;
+
 public:
     ClapTrap();
     ClapTrap(std::string n);
@@ -20,5 +21,9 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };
+
+
+
+
 
 #endif

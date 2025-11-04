@@ -30,6 +30,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
     std::cout << "ScavTrap " << name << " has been assigned values from another instance!" << std::endl;
     return *this;
 }
+
 ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap " << name << " has been destroyed!" << std::endl;

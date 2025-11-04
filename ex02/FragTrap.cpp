@@ -24,12 +24,11 @@ FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 FragTrap &FragTrap::operator=(const FragTrap &other)
 {
     if (this != &other)
-    {
         ClapTrap::operator=(other);
-    }
     std::cout << "FragTrap " << name << " has been assigned values from another instance!" << std::endl;
     return *this;
 }
+
 FragTrap::~FragTrap()
 {
     std::cout << "FragTrap " << name << " has been destroyed!" << std::endl;
