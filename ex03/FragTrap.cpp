@@ -3,7 +3,7 @@
 FragTrap::FragTrap(std::string n) : ClapTrap(n)
 {
     Hit = 100;
-    Energy = 50;
+    Energy = 100;
     Damage = 20;
     std::cout << "FragTrap " << name << " has been created with Parameterized constructor" << std::endl;
 }
@@ -11,7 +11,7 @@ FragTrap::FragTrap(std::string n) : ClapTrap(n)
 FragTrap::FragTrap() : ClapTrap()
 {
     Hit = 100;
-    Energy = 50;
+    Energy = 100;
     Damage = 20;
     std::cout << "FragTrap " << name << " has been created with Default constructor" << std::endl;
 } 
